@@ -2,6 +2,7 @@
 .header {
     border-bottom: 1px solid #E4E4E4;
 }
+
 .container-h {
     display: flex;
     justify-content: space-between;
@@ -12,13 +13,16 @@
 .logo {
     height: 50px;
 }
+
 .nav {
     display: flex;
     list-style-type: none;
 }
+
 .nav li {
     margin: 0 30px;
 }
+
 .text-title {
     letter-spacing: -2.4px;
     line-height: 68px;
@@ -149,11 +153,13 @@
 .banner-text {
     padding: 20px 0 50px 0;
 }
+
 .text-rip {
     font-size: 18px;
     font-weight: 700;
     line-height: 26px;
 }
+
 .rip {
     padding: 30px 15% 0 15%;
 }
@@ -233,6 +239,7 @@
 .why_block img {
     padding-bottom: 24px;
 }
+
 .bg-hero {
     background: url(../img/Hero-bg.png) center;
     background-size: cover;
@@ -273,6 +280,7 @@
     margin-top: 12px;
     background: #FE6D06;
 }
+
 footer {
     color: white;
     background: url(../img/WhyBG.png) no-repeat center;
@@ -280,6 +288,7 @@ footer {
     padding: 74px 0 32px 0;
     border-top: 2px solid aquamarine;
 }
+
 .footer-title::after {
     content: "";
     display: block;
@@ -289,6 +298,7 @@ footer {
     height: 4px;
     background: #FFF;
 }
+
 .wrapper_footer {
     gap: 150px;
 }
@@ -325,10 +335,12 @@ footer {
     box-shadow: 0 4px 49px 0 rgba(0, 0, 0, 0.30);
     backdrop-filter: blur(10px);
 }
+
 .btn-app span {
     font-size: 12px;
     font-weight: 800;
 }
+
 .btn-app {
     border-radius: 30px;
     width: 200px;
@@ -383,6 +395,7 @@ footer {
 .btn-faq:hover {
     cursor: pointer;
 }
+
 .btn-app-s {
     border-radius: 30px;
     padding: 10px 50px;
@@ -407,6 +420,7 @@ footer {
     background: url(../img/team-bg.png) no-repeat top;
     background-size: cover;
 }
+
 .team_wrapper {
     margin-top: 95px;
 }
@@ -417,6 +431,7 @@ footer {
     height: 304px;
     box-shadow: 0 0 20px 3px #FE6D06;
 }
+
 .team_desc-block {
     border-radius: 40px;
     background: #2A2D51;
@@ -424,8 +439,70 @@ footer {
     padding: 39px 40px 34px 40px;
     height: 100%;
 }
+
 .team_text {
     font-size: 18px;
     font-weight: 600;
     line-height: 26px;
+}
+
+.whatIs_wrapper {
+    padding: 250px 0;
+}
+
+.ellipse_text {
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.what_bg {
+    background: linear-gradient(104deg, rgba(254, 109, 6, 0.20) 0%, rgba(255, 255, 255) 51.04%, rgba(254, 109, 6, 0.20) 100%), #FFF;
+}
+
+.what_text {
+    width: 300px !important;
+}
+
+.what_text img {
+    margin: 0 0 12px 0;
+}
+
+.what_desc {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.round {
+    width: 64px;
+    height: 64px;
+    background: #FE6D06;
+    border-radius: 50%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    box-shadow: 0 0 50px 5px #FE6D06;
+}
+
+.white_blesk {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    box-shadow: 0 0 40px 20px white;
+}
+
+.ellipse {
+    position: absolute;
+    text-align: center;
+}
+
+.stick {
+    content: "";
+    width: 183px;
+    height: 3px;
+    position: absolute;
+    background: linear-gradient(to left, #FE6D06, rgba(254, 109, 6, 0));
+    display: inline-block;
 }
