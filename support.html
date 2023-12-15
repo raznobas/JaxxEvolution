@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!--    <link rel="icon" href="/favicon.ico">-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jaxx Evolution | Support</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+<div id="app">
+    <header class="header">
+        <div class="container container-h">
+            <a href="./index.html">
+                <img alt="logo" class="logo" src="img/logo.svg" width="125" height="125" />
+            </a>
+            <nav>
+                <ul class="nav">
+                    <li><a href="./app.html">Web app</a></li>
+                    <li><a href="./download.html">Download</a></li>
+                    <li><a href="./support.html">Support</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div style="background-color: #1A1E42">
+        <div class="bg-neon">
+            <div class="container text-center text-white pt-6">
+                <h1>Support</h1>
+                <h3 class="text-app">Jaxx Evolution is a fresh perspective on <br> managing your cryptocurrencies</h3>
+            </div>
+            <div class="container py-5">
+                <div class="row row-cols-2 row-gap-4">
+                    <div class="col">
+                        <div class="support_block">
+                            <div class="question_title text-white">
+                                <h4 class="text-center m-0">Wallet</h4>
+                            </div>
+                            <div class="answer_block">
+                                <div v-for="(wallet, index) in wallets" :key="index" class="faq_block-item">
+                                    <div class="row">
+                                        <div class="col fw-bolder faq-name">{{ wallet.question }}</div>
+                                        <div @click="toggleAnswer1(index)" class="col-1 w-auto btn-faq">
+                                            <img v-if="wallet.showAnswer" src="img/minus.svg" alt="">
+                                            <img v-else src="img/plus.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div v-if="wallet.showAnswer" class="mt-2">{{ wallet.answer }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="support_block">
+                            <div class="question_title text-white">
+                                <h4 class="text-center m-0">KYC</h4>
+                            </div>
+                            <div class="answer_block">
+                                <div v-for="(KYC, index) in KYCs" :key="index" class="faq_block-item">
+                                    <div class="row">
+                                        <div class="col fw-bolder faq-name">{{ KYC.question }}</div>
+                                        <div @click="toggleAnswer2(index)" class="col-1 w-auto btn-faq">
+                                            <img v-if="KYC.showAnswer" src="img/minus.svg" alt="">
+                                            <img v-else src="img/plus.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div v-if="KYC.showAnswer" class="mt-2">{{ KYC.answer }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="support_block">
+                            <div class="question_title text-white">
+                                <h4 class="text-center m-0">Buy/Sell Crypto</h4>
+                            </div>
+                            <div class="answer_block">
+                                <div v-for="(crypto, index) in cryptos" :key="index" class="faq_block-item">
+                                    <div class="row">
+                                        <div class="col fw-bolder faq-name">{{ crypto.question }}</div>
+                                        <div @click="toggleAnswer3(index)" class="col-1 w-auto btn-faq">
+                                            <img v-if="crypto.showAnswer" src="img/minus.svg" alt="">
+                                            <img v-else src="img/plus.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div v-if="crypto.showAnswer" class="mt-2">{{ crypto.answer }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="support_block">
+                            <div class="question_title text-white">
+                                <h4 class="text-center m-0">Wallet</h4>
+                            </div>
+                            <div class="answer_block">
+                                <div v-for="(security, index) in securities" :key="index" class="faq_block-item">
+                                    <div class="row">
+                                        <div class="col fw-bolder faq-name">{{ security.question }}</div>
+                                        <div @click="toggleAnswer4(index)" class="col-1 w-auto btn-faq">
+                                            <img v-if="security.showAnswer" src="img/minus.svg" alt="">
+                                            <img v-else src="img/plus.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div v-if="security.showAnswer" class="mt-2">{{ security.answer }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container text-center text-white py-6">
+                <h1>Didn’t find what you were <br> looking for?</h1>
+                <h3 class="text-app fs-4">Please reach out to us, we will be glad to answer any of your questions.</h3>
+                <a href="/" class="btn btn-neon btn-app-s"><span class="text-neon">SEND US A MESSAGE</span></a>
+            </div>
+        </div>
+    </div>
+    <footer class="mt-auto">
+        <div class="container">
+            <div class="row justify-content-center wrapper_footer">
+                <div class="col-3 w-auto">
+                    <h3 class="footer-title">Jaxx</h3>
+                    <div>
+                        <a href="">Rules</a> <br>
+                        <a href="">Policy</a> <br>
+                        <a href="">Tournaments</a> <br>
+                        <a href="">Giveaways</a> <br>
+                        <a href="">News</a> <br>
+                    </div>
+                </div>
+                <div class="col-3 w-auto">
+                    <h3 class="footer-title">Company</h3>
+                    <div>
+                        <a href="">About Us</a> <br>
+                        <a href="">Questions</a> <br>
+                        <a href="">Blog</a> <br>
+                    </div>
+                </div>
+                <div class="col-3 w-auto">
+                    <h3 class="footer-title">Contacts</h3>
+                    <div>
+                        <a href="">Facebook</a> <br>
+                        <a href="">Twitter / Twitter Support</a> <br>
+                        <a href="">Instagram</a> <br>
+                        <a href="">Giveaways</a> <br>
+                        <a href="">News</a> <br>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">© Jaxx Evolution 2023</div>
+        </div>
+    </footer>
+</div>
+<script src="https://unpkg.com/vue@next"></script>
+<script>
+    const app = Vue.createApp({
+        data() {
+            return {
+                wallets: [
+                    {
+                        question: 'What is a cryptocurrency wallet?',
+                        answer: 'Cryptocurrency wallet is software or hardware device that enables storing, sending, and receiving cryptocurrency. It ensures the secure storage of private keys needed to access your crypto assets.',
+                        showAnswer: true,
+                    },
+                    {
+                        question: 'Which type of cryptocurrency wallet to choose:\n' +
+                            'hardware, software, or online?',
+                        answer: 'Cryptocurrency wallet is software or hardware device that enables storing, sending, and receiving cryptocurrency. It ensures the secure storage of private keys needed to access your crypto assets.',
+                        showAnswer: false,
+                    },
+                    {
+                        question: 'How can I fund my cryptocurrency wallet?',
+                        answer: 'Cryptocurrency wallet is software or hardware device that enables storing, sending, and receiving cryptocurrency. It ensures the secure storage of private keys needed to access your crypto assets.',
+                        showAnswer: false,
+                    }
+                ],
+                KYCs: [
+                    {
+                        question: 'Why is KYC necessary?',
+                        answer: 'Know Your Customer (KYC) is an integral part of the financial industry, especially in the fintech and cryptocurrency sectors. KYC refers to the process of verifying the identity of customers to mitigate risks.',
+                        showAnswer: true,
+                    },
+                    {
+                        question: 'Which type of cryptocurrency wallet to choose:\n' +
+                            'hardware, software, or online?',
+                        answer: 'Cryptocurrency wallet is software or hardware device that enables storing, sending, and receiving cryptocurrency. It ensures the secure storage of private keys needed to access your crypto assets.',
+                        showAnswer: false,
+                    },
+                    {
+                        question: 'How can I fund my cryptocurrency wallet?',
+                        answer: 'Cryptocurrency wallet is software or hardware device that enables storing, sending, and receiving cryptocurrency. It ensures the secure storage of private keys needed to access your crypto assets.',
+                        showAnswer: false,
+                    }
+                ],
+                cryptos: [
+                    {
+                        question: 'How do fees work?',
+                        answer: 'Cryptocurrencies have revolutionized the way we transact and manage our finances, offering speed, security, and control.\n' +
+                            'This fee can be up to 0.8% of the transaction amount.',
+                        showAnswer: true,
+                    },
+                    {
+                        question: 'Which type of cryptocurrency wallet to choose:\n' +
+                            'hardware, software, or online?',
+                        answer: 'Cryptocurrency wallet is software or hardware device that enables storing, sending, and receiving cryptocurrency. It ensures the secure storage of private keys needed to access your crypto assets.',
+                        showAnswer: false,
+                    },
+                    {
+                        question: 'How can I fund my cryptocurrency wallet?',
+                        answer: 'Cryptocurrency wallet is software or hardware device that enables storing, sending, and receiving cryptocurrency. It ensures the secure storage of private keys needed to access your crypto assets.',
+                        showAnswer: false,
+                    }
+                ],
+                securities: [
+                    {
+                        question: 'How can I make my account more secure?',
+                        answer: 'In the ever-evolving landscape of cybersecurity, protecting your digital assets has become paramount. As a CryptoWallet.com user, you have taken the first step toward securing your cryptocurrency holdings. ',
+                        showAnswer: true,
+                    },
+                    {
+                        question: 'Which type of cryptocurrency wallet to choose:\n' +
+                            'hardware, software, or online?',
+                        answer: 'Cryptocurrency wallet is software or hardware device that enables storing, sending, and receiving cryptocurrency. It ensures the secure storage of private keys needed to access your crypto assets.',
+                        showAnswer: false,
+                    },
+                    {
+                        question: 'How can I fund my cryptocurrency wallet?',
+                        answer: 'Cryptocurrency wallet is software or hardware device that enables storing, sending, and receiving cryptocurrency. It ensures the secure storage of private keys needed to access your crypto assets.',
+                        showAnswer: false,
+                    }
+                ],
+            };
+        },
+        methods: {
+            toggleAnswer1(index) {
+                this.wallets[index].showAnswer = !this.wallets[index].showAnswer;
+            },
+            toggleAnswer2(index) {
+                this.KYCs[index].showAnswer = !this.KYCs[index].showAnswer;
+            },
+            toggleAnswer3(index) {
+                this.cryptos[index].showAnswer = !this.cryptos[index].showAnswer;
+            },
+            toggleAnswer4(index) {
+                this.securities[index].showAnswer = !this.securities[index].showAnswer;
+            },
+        },
+    });
+
+    app.mount('#app');
+</script>
+</body>
+</html>

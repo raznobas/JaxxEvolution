@@ -1,0 +1,431 @@
+
+.header {
+    border-bottom: 1px solid #E4E4E4;
+}
+.container-h {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    height: 50px;
+}
+.nav {
+    display: flex;
+    list-style-type: none;
+}
+.nav li {
+    margin: 0 30px;
+}
+.text-title {
+    letter-spacing: -2.4px;
+    line-height: 68px;
+}
+
+.text-text {
+    opacity: 0.8;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 32px 0 40px 0;
+}
+
+.bg-coins {
+    height: 100%;
+    width: 100%;
+    opacity: 0.2;
+    z-index: -1;
+    top: 0;
+    position: absolute;
+    background: url(../img/tokens.png) no-repeat top;
+}
+
+.wrapper_why, .wrapper_fund {
+    padding: 80px 0 80px 0;
+    color: white;
+    background: url(../img/WhyBG.png) no-repeat center;
+    background-size: cover;
+}
+
+.why_text {
+    opacity: 0.8;
+}
+
+.wrapper_fund {
+    padding: 130px 0 110px 0;
+}
+
+.why_blocks-list {
+    padding: 60px 0 60px 0;
+}
+
+.wrapper_why .row {
+    gap: 24px;
+}
+
+.h-title::before {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 2px;
+    margin-bottom: 12px;
+    background: linear-gradient(90deg, #0CEBEB 0%, rgba(36, 244, 192, 0.71) 51.3%, #29FFC6 98.16%);
+}
+
+.fund_blocks-list {
+    padding: 50px 0 80px 0;
+    gap: 10px;
+}
+
+.fund_block {
+    padding: 24px;
+    border-radius: 4px;
+    background: rgba(42, 45, 81, 0.70);
+}
+
+.fund_block h4 {
+    background: linear-gradient(90deg, #0CEBEB 0%, rgba(36, 244, 192, 0.71) 51.3%, #29FFC6 98.16%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.fund_text {
+    padding: 14px 0 48px 0;
+    opacity: 0.9;
+}
+
+.stats_blocks-list {
+    padding: 0 5% 0 5%;
+}
+
+.stat-block {
+    text-align: center;
+}
+
+.stat_main {
+    padding: 24px 20px 20px 20px;
+    margin-bottom: 18px;
+    position: relative;
+}
+
+.stat_num {
+    font-size: 40px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #0CEBEB 0%, rgba(36, 244, 192, 0.71) 51.3%, #29FFC6 98.16%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.under_icon {
+    font-size: 20px;
+    opacity: 0.8;
+    font-weight: 500;
+    line-height: 130%;
+}
+
+.stat_text {
+    opacity: 0.6;
+    padding: 0 20px 0 20px;
+}
+
+.line-border {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.wrapper_banner {
+    margin: 0 5% 0 5%;
+    padding: 50px;
+    border-radius: 15px;
+    background: url(../img/WhyBG.png) no-repeat center;
+    background-size: cover;
+}
+
+.banner-text {
+    padding: 20px 0 50px 0;
+}
+.text-rip {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+}
+.rip {
+    padding: 30px 15% 0 15%;
+}
+
+.wrapper_faq {
+    padding: 0 10% 0 10%;
+    margin: 120px auto 120px auto;
+}
+
+.faq_block-list {
+    margin-top: 60px;
+}
+
+.faq_block-item:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+.faq-name {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.faq-answer {
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.faq {
+    font-weight: 600;
+    padding-top: 10px;
+    border-top: 3px solid #FE6D06;
+}
+
+.btn-faq:hover {
+    cursor: pointer;
+}
+
+.btn-soon img {
+    padding: 0 10px 0 0;
+}
+
+.soon_text {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 1.085px;
+    padding: 25px 0;
+}
+
+.soon_title::after {
+    content: "";
+    display: block;
+    width: 220px;
+    height: 5px;
+    margin-top: 12px;
+    background: #FE6D06;
+}
+
+.btn-soon span {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.row-soon {
+    row-gap: 10px;
+    column-gap: 12px;
+}
+
+.why_block {
+    border-radius: 8px;
+    padding: 32px;
+    background: rgba(42, 69, 95, 0.50);
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.why_block img {
+    padding-bottom: 24px;
+}
+.bg-hero {
+    background: url(../img/Hero-bg.png) center;
+    background-size: cover;
+}
+
+.hero-block {
+    padding: 200px 0 180px 0;
+}
+
+.text-app {
+    font-weight: 700;
+    line-height: 30px;
+    padding: 26px 0 50px 0;
+}
+
+.btn-app {
+    border-radius: 30px;
+    width: 200px;
+}
+
+.btn-app span {
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.text-app-2 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 150%;
+    padding: 40px 0 50px 0;
+}
+
+.soon_title::after {
+    content: "";
+    display: block;
+    width: 220px;
+    height: 5px;
+    margin-top: 12px;
+    background: #FE6D06;
+}
+footer {
+    color: white;
+    background: url(../img/WhyBG.png) no-repeat center;
+    background-size: cover;
+    padding: 74px 0 32px 0;
+    border-top: 2px solid aquamarine;
+}
+.footer-title::after {
+    content: "";
+    display: block;
+    border-radius: 5px;
+    margin-top: 5px;
+    width: 100px;
+    height: 4px;
+    background: #FFF;
+}
+.wrapper_footer {
+    gap: 150px;
+}
+
+.bg-hero-2 {
+    background: url(../img/Download-bg.png) top;
+    background-size: cover;
+}
+
+.download-btn {
+    border-radius: 6px;
+    border: 1px solid #FFF;
+    padding: 10px 15px 10px 18px;
+    width: 170px;
+}
+
+.download_text {
+    padding: 37px 0 40px 0;
+}
+
+.benefit_title {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 96.1%;
+}
+
+.benefit_icon-bg {
+    width: 72px;
+    height: 72px;
+    padding: 3px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.00);
+    background: radial-gradient(126.27% 124.21% at 2.96% 5.05%, rgba(101, 101, 121, 0.80) 0%, rgba(40, 40, 57, 0.80) 100%);
+    box-shadow: 0 4px 49px 0 rgba(0, 0, 0, 0.30);
+    backdrop-filter: blur(10px);
+}
+.btn-app span {
+    font-size: 12px;
+    font-weight: 800;
+}
+.btn-app {
+    border-radius: 30px;
+    width: 200px;
+}
+
+.benefit_block {
+    row-gap: 108px;
+}
+
+.benefit_text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%;
+    opacity: 0.6;
+    padding-top: 8px;
+}
+
+.text-app {
+    font-weight: 700;
+    line-height: 30px;
+    padding: 26px 0 50px 0;
+}
+
+.question_title {
+    border-radius: 12px;
+    border: 1px solid #FFF;
+    padding: 23px;
+    background: linear-gradient(180deg, #24F4C0 0%, rgba(12, 235, 235, 0.16) 148%);
+    box-shadow: 0 4px 12px 0 rgba(36, 244, 192, 0.25);
+}
+
+.support_block {
+    border-radius: 12px;
+    border: 1px solid #3FA774;
+    background: #FFF;
+}
+
+.answer_block {
+    padding: 40px 30px;
+}
+
+.faq-name {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.question_title {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.btn-faq:hover {
+    cursor: pointer;
+}
+.btn-app-s {
+    border-radius: 30px;
+    padding: 10px 50px;
+    width: auto;
+}
+
+.btn-app-s span {
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.faq_block-item:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.bg-neon-about {
+    background: url(../img/WhyBGround.png) no-repeat center;
+    background-size: cover;
+}
+
+.team-bg {
+    background: url(../img/team-bg.png) no-repeat top;
+    background-size: cover;
+}
+.team_wrapper {
+    margin-top: 95px;
+}
+
+.photo_block {
+    border-radius: 40px;
+    width: 312px;
+    height: 304px;
+    box-shadow: 0 0 20px 3px #FE6D06;
+}
+.team_desc-block {
+    border-radius: 40px;
+    background: #2A2D51;
+    width: 648px;
+    padding: 39px 40px 34px 40px;
+    height: 100%;
+}
+.team_text {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 26px;
+}

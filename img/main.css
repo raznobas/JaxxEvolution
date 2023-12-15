@@ -1,0 +1,79 @@
+@import './base.css';
+
+li a {
+    text-decoration: none;
+    color: #667085;
+    font-weight: 600;
+}
+h1 {
+    font-size: 60px;
+    font-weight: 700;
+}
+h2 {
+    font-size: 44px;
+    font-weight: 600;
+}
+h3 {
+    font-size: 32px;
+}
+a {
+    text-decoration: none;
+    color: unset;
+}
+.text-neon {
+    background: linear-gradient(90deg, #0CEBEB 0%, rgba(36, 244, 192, 0.71) 51.3%, #29FFC6 98.16%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.text-main {
+    color: #FE6D06;
+}
+.bg-neon {
+    background: linear-gradient(150deg, rgb(32 138 129 / 25%) 0%, rgba(26,30,66,0.5) 50%, rgb(32 138 129 / 28%) 100%);
+}
+.bg-main {
+    background-color: #FE6D06;
+}
+.pt-6 {
+    padding-top: 140px;
+}
+.text-opacity {
+    opacity: 0.6;
+}
+.py-6 {
+    padding: 140px 0 140px 0;
+}
+.btn-neon {
+    border-radius: 15px;
+    text-align: center;
+    width: 230px;
+    padding: 10px 24px;
+    background: #181A1D;
+    box-shadow: 0 0 15px 0 #26EAB8;
+}
+.btn-text {
+    background: linear-gradient(90deg, #0CEBEB 0%, rgba(36, 244, 192, 0.71) 51.3%, #29FFC6 98.16%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 18px;
+    font-weight: 800;
+}
+.btn-soon {
+    border-radius: 4px;
+    background-color: #FE6D06;
+    color: white;
+    padding: 10px 25px;
+}
+.btn-soon:active {
+    background-color: #FE6D06!important;
+}
+.btn-soon:hover {
+    background-color: rgba(254, 109, 6, 0.8);
+}
+.btn-neon:hover {
+    color: #29FFC6;
+    box-shadow: 0 0 20px 0 #26EAB8;
+}
+.btn:hover {
+    color: inherit;
+}
