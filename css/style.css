@@ -716,7 +716,7 @@ footer {
     /*about page*/
 
     .bg-neon-about {
-       background: #1A1E42;
+        background: linear-gradient(150deg, rgb(32 138 129 / 25%) 0%, rgba(26,30,66,0.5) 50%, rgb(32 138 129 / 28%) 100%);
     }
     .photo-col {
         width: 75%!important;
