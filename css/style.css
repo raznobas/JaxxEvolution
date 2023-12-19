@@ -1,6 +1,10 @@
 
 .header {
     border-bottom: 1px solid #E4E4E4;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 99;
 }
 
 .container-h {
@@ -165,12 +169,12 @@
 }
 
 .wrapper_faq {
-    padding: 0 10% 0 10%;
     margin: 120px auto 120px auto;
 }
 
 .faq_block-list {
     margin-top: 60px;
+    padding: 0 10% 0 10%;
 }
 
 .faq_block-item:not(:last-child) {
@@ -227,6 +231,9 @@
 .row-soon {
     row-gap: 10px;
     column-gap: 12px;
+}
+.btn-soon {
+    height: 100%;
 }
 
 .why_block {
@@ -286,7 +293,7 @@ footer {
     background: url(../img/WhyBG.png) no-repeat center;
     background-size: cover;
     padding: 74px 0 32px 0;
-    border-top: 2px solid aquamarine;
+    border-top: 2px solid #26EAB8;
 }
 
 .footer-title::after {
@@ -326,14 +333,20 @@ footer {
 }
 
 .benefit_icon-bg {
+    text-align: center;
     width: 72px;
     height: 72px;
-    padding: 3px;
     border-radius: 10px;
     border: 1px solid rgba(0, 0, 0, 0.00);
     background: radial-gradient(126.27% 124.21% at 2.96% 5.05%, rgba(101, 101, 121, 0.80) 0%, rgba(40, 40, 57, 0.80) 100%);
     box-shadow: 0 4px 49px 0 rgba(0, 0, 0, 0.30);
     backdrop-filter: blur(10px);
+}
+.benefit_icon-bg img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .btn-app span {
@@ -350,12 +363,21 @@ footer {
     row-gap: 108px;
 }
 
+
 .benefit_text {
     font-size: 14px;
     font-weight: 400;
-    line-height: 100%;
+    line-height: 103%;
     opacity: 0.6;
     padding-top: 8px;
+}
+.arm-down-bg {
+    position: absolute;
+    bottom: 50px;
+    right: 20px;
+    width: 119px;
+    height: 78px;
+    background: linear-gradient(186deg, rgba(0, 0, 0, 0.00) 5%, #1a2043 95.64%);
 }
 
 .text-app {
@@ -426,16 +448,23 @@ footer {
 }
 
 .photo_block {
+    width: 100%;
+    background-size: cover!important;
+    background-repeat: no-repeat!important;
     border-radius: 40px;
-    width: 312px;
     height: 304px;
-    box-shadow: 0 0 20px 3px #FE6D06;
+    box-shadow: 0 0 20px 3px #0CEBEB;
+}
+.photo-col {
+    width: 25%!important;
+}
+.team_text-col {
+    width: 50%!important;
 }
 
 .team_desc-block {
     border-radius: 40px;
     background: #2A2D51;
-    width: 648px;
     padding: 39px 40px 34px 40px;
     height: 100%;
 }
@@ -502,7 +531,246 @@ footer {
     content: "";
     width: 183px;
     height: 3px;
+    border-radius: 200px;
     position: absolute;
     background: linear-gradient(to left, #FE6D06, rgba(254, 109, 6, 0));
     display: inline-block;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 46px;
+    }
+    h2 {
+        font-size: 32px;
+    }
+    h3 {
+        font-size: 28px;
+    }
+    .bg-coins {
+        display: none;
+    }
+    .py-6 {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .text-title {
+        line-height: initial;
+    }
+    .text-text {
+        padding: 25px 0 20px 0;
+    }
+    .hero-main {
+        text-align: center;
+    }
+    .why_blocks-list {
+        padding: 30px 0 40px 0;
+    }
+    .h-title {
+        text-align: center;
+    }
+    .h-title::before {
+        width: 100%;
+    }
+    .soon_wrapper {
+        flex-direction: column-reverse;
+    }
+    .soon_title::after {
+        width: 100%;
+    }
+    .btn-soon {
+        padding: 8px 0;
+    }
+    .row-soon {
+        column-gap: 10px;
+        justify-content: center;
+    }
+    .wrapper_fund {
+        padding: 60px 0 60px 0;
+    }
+    .fund_blocks-list {
+        margin: 0;
+    }
+    .fund_text {
+        padding: 14px 0 28px 0;
+    }
+    .stats_blocks-list {
+        row-gap: 30px;
+    }
+    .wrapper_banner {
+        padding: 20px 15px;
+        margin: 0 20px;
+    }
+    .btn-text {
+        font-size: 16px;
+    }
+    .wrapper_banner div {
+        flex-direction: column-reverse;
+        row-gap: 20px;
+    }
+    .banner-text {
+        padding: 10px 0 25px 0;
+    }
+    .rip {
+        padding: 10px 0;
+    }
+    .wrapper_faq {
+        margin: 80px auto 80px auto;
+    }
+    .faq_block-list {
+        padding: 0;
+    }
+    .btn-faq {
+        text-align: end;
+        width: 16.66666667%!important;
+    }
+    .wrapper_footer {
+        gap: 20px;
+    }
+    .footer-block {
+        text-align: center;
+        width: 100%!important;
+    }
+    footer {
+        border-top-width: 1px;
+    }
+    .footer-title {
+        font-size: 32px;
+        margin-bottom: 25px;
+    }
+    .footer-title::after {
+        position: absolute;
+        transform: translateX(-50%);
+        left: 50%;
+    }
+    .footer_item-list {
+        font-size: 20px;
+    }
+
+    #burger-menu {
+        position: relative;
+    }
+    #nav-block {
+        position: absolute;
+        right: 0;
+        width: 100%;
+        height: auto;
+        z-index: 3;
+        background-color: white;
+        border: 1px solid #E4E4E4;
+    }
+    #nav-block.show {
+        display: block!important;
+    }
+
+    #nav-block ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 1rem 0 1rem 0;
+    }
+
+    #nav-block ul li {
+        text-align: center;
+    }
+
+    #nav-block ul li a {
+        display: inherit;
+        padding: 10px;
+        text-decoration: none;
+        color: #333;
+    }
+
+    /* webApp page */
+
+    .hero-block {
+        padding: 40px 0 40px 0;
+    }
+    .hero-block h1 br {
+        display: none;
+    }
+    .bg-hero {
+        background-position: right;
+    }
+
+    /* download page  */
+
+    .download_text {
+        padding: 20px 0 30px 0;
+    }
+    .benefit_block {
+        row-gap: 30px;
+        margin-bottom: 30px;
+    }
+    .pt-6 {
+        padding-top: 40px;
+    }
+
+    /* support page */
+    br:not(.footer_item-list br) {
+        display: none;
+    }
+    .answer_block {
+        padding: 25px 15px;
+    }
+
+    /*about page*/
+
+    .bg-neon-about {
+       background: #1A1E42;
+    }
+    .photo-col {
+        width: 75%!important;
+        padding-bottom: 15px;
+    }
+    .team-bg {
+        background: #1A1E42;
+    }
+    .team_wrapper {
+        margin-top: 40px;
+    }
+    .team_text-col {
+        width: 100%!important;
+    }
+    .photo_block {
+        width: 200px;
+        height: 195px;
+        left: 50%;
+        position: relative;
+        transform: translateX(-50%);
+        border-radius: 50%;
+    }
+    .team_desc-block {
+        text-align: center;
+        padding: 20px 15px;
+        border-radius: 20px;
+    }
+    .whatIs_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 40px 0;
+        row-gap: 25px;
+        justify-content: center;
+    }
+    .what_text {
+        width: auto;
+    }
+    .ellipse {
+        position: static;
+        width: 50%;
+    }
+    .el-last {
+        width: 100%;
+    }
+    .stick {
+        display: none;
+    }
+
+}
+@media (min-width: 769px) {
+   .ps--30 {
+       padding-left: 30px;
+   }
+    .ms---30 {
+        margin-left: -30px;
+    }
 }

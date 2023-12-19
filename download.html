@@ -1,193 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <!--    <link rel="icon" href="/favicon.ico">-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jaxx Evolution | Download</title>
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/base.css">
+    <meta charset="UTF-8">
+    <!--    <link rel="icon" href="/favicon.ico">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaxx Evolution | Download</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/base.css">
 </head>
 <body>
-<header class="header">
-  <div class="container container-h">
-    <a href="./index.html">
-      <img alt="logo" class="logo" src="img/logo.svg" width="125" height="125" />
-    </a>
-    <nav>
-      <ul class="nav">
-        <li><a href="./app.html">Web app</a></li>
-        <li><a href="./download.html">Download</a></li>
-        <li><a href="./support.html">Support</a></li>
-        <li><a href="./about.html">About Us</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-<div class="bg-neon">
-  <div class="container-fluid bg-hero-2 text-white">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col">
-          <img src="img/img_phone.png" alt="app">
+<div id="app">
+    <header id="header" class="header">
+        <div class="container container-h">
+            <a href="./index.html">
+                <img alt="logo" class="logo" src="img/logo.svg" width="125" height="125"/>
+            </a>
+            <nav class="d-none d-lg-block">
+                <ul class="nav">
+                    <li><a href="./app.html">Web app</a></li>
+                    <li><a href="./download.html">Download</a></li>
+                    <li><a href="./support.html">Support</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                </ul>
+            </nav>
+            <nav class="d-block d-lg-none">
+                <div id="burger-menu" @click="toggleMenu">
+                    <div id="burger">
+                        <svg width="50px" class="mob-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                             focusable="false"
+                             aria-hidden="true">
+                            <rect x="15" y="16" width="18" height="2"></rect>
+                            <rect x="15" y="23" width="18" height="2"></rect>
+                            <rect x="15" y="30" width="18" height="2"></rect>
+                        </svg>
+                    </div>
+                </div>
+            </nav>
         </div>
-        <div class="col text-end">
-          <h2 class="fw-bold">Jaxx Evolution</h2>
-          <h3 class="download_text">
-            Jaxx Evolution will be available as a desktop application for multiple platforms, including
-            iOS, Android, Windows and Linux.
-          </h3>
-          <div class="row justify-content-end m-0 gap-2">
-            <div class="col-4 w-auto">
-              <div class="btn d-flex align-items-center justify-content-center download-btn row">
-                <img class="col-5 w-auto" src="img/linux.png" alt="linux">
-                <span class="col-5 w-auto fw-bold p-0 text-white">Linux</span>
-              </div>
-            </div>
-            <div class="col-4 w-auto">
-              <div class="btn d-flex align-items-center justify-content-center download-btn row">
-                <img class="col-5 w-auto" src="img/win.png" alt="win">
-                <span class="col-5 w-auto fw-bold p-0 text-white">Windows</span>
-              </div>
-            </div>
-          </div>
+        <div id="nav-block" :class="{show: showMenu}" v-if="showMenu" style="display:none;">
+            <ul>
+                <li><a href="./app.html">Web app</a></li>
+                <li><a href="./download.html">Download</a></li>
+                <li><a href="./support.html">Support</a></li>
+                <li><a href="./about.html">About Us</a></li>
+            </ul>
         </div>
-      </div>
+    </header>
+    <div class="bg-neon">
+        <div class="container-fluid bg-hero-2 text-white overflow-hidden">
+            <div class="container p-0">
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg">
+                        <img class="img-fluid" src="img/img_phone.png" alt="app">
+                    </div>
+                    <div class="col text-lg-end text-center">
+                        <h2 class="fw-bold">Jaxx Evolution</h2>
+                        <h3 class="download_text">
+                            Jaxx Evolution will be available as a desktop application for multiple platforms, including
+                            iOS, Android, Windows and Linux.
+                        </h3>
+                        <div class="row justify-content-center justify-content-lg-end m-lg-0 gap-2">
+                            <div class="col-4 w-auto">
+                                <div class="btn d-flex align-items-center justify-content-center download-btn row">
+                                    <img class="col-5 w-auto" src="img/linux.png" alt="linux">
+                                    <span class="col-5 w-auto fw-bold p-0 text-white">Linux</span>
+                                </div>
+                            </div>
+                            <div class="col-4 w-auto">
+                                <div class="btn d-flex align-items-center justify-content-center download-btn row">
+                                    <img class="col-5 w-auto" src="img/win.png" alt="win">
+                                    <span class="col-5 w-auto fw-bold p-0 text-white">Windows</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container py-6">
+                <div class="ipad_block-sm d-sm-block d-lg-none mb-4">
+                    <img class="img-fluid" src="img/ipad.png" alt="ipad">
+                </div>
+                <div class="row benefit_wrapper align-items-center">
+                    <div class="col-12 col-lg pe-lg-0">
+                        <div class="row row-cols-1 align-items-start benefit_block">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-1 w-auto">
+                                        <div class="benefit_icon-bg"><img src="img/icon-1.svg" alt=""></div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="benefit_title">Manage dozens of cryptocurrencies</div>
+                                        <div class="benefit_text">Send and receive various cryptocurrencies with ease,
+                                            check balances,
+                                            review transaction history, and access detailed coin information.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-1 w-auto">
+                                        <div class="benefit_icon-bg"><img src="img/icon-2.svg" alt=""></div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="benefit_title">Support Service</div>
+                                        <div class="benefit_text">We provide prompt assistance in all aspects of using a
+                                            crypto wallet. Answers to questions, help with security and support in all
+                                            situations.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-1 w-auto">
+                                        <div class="benefit_icon-bg" style="padding: 7px 6px 0 0"><img
+                                                src="img/icon-3.svg" alt=""></div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="benefit_title">User Interface Convenience</div>
+                                        <div class="benefit_text">Experience the ease of use in our crypto wallet with
+                                            an intuitive and user-friendly interface. Seamlessly navigate through
+                                            features, making managing your digital assets effortless and efficient.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col p-0 position-relative d-none d-md-block d-lg-block">
+                        <img style="width: 100%" src="img/ipad.png" alt="ipad">
+<!--                        <div class="arm-down-bg"></div>-->
+                    </div>
+                    <div class="col-12 col-lg ps-lg-0 ms---30">
+                        <div class="row row-cols-1 align-items-start benefit_block">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-1 w-auto">
+                                        <div class="benefit_icon-bg"><img src="img/icon-4.svg" alt=""></div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="benefit_title">Support for 90+ cryptocurrencies</div>
+                                        <div class="benefit_text">Enjoy a diverse range of digital assets in your crypto
+                                            wallet, providing you with extensive options for managing and diversifying
+                                            your portfolio. Stay ahead in the dynamic world of cryptocurrency with our
+                                            comprehensive support for a wide array of coins.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="row ps--30">
+                                    <div class="col-1 w-auto">
+                                        <div class="benefit_icon-bg"><img src="img/icon-5.svg" alt=""></div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="benefit_title">Multilingual Support</div>
+                                        <div class="benefit_text">Experience the convenience of managing your crypto
+                                            wallet in multiple languages. Our wallet offers a user-friendly interface
+                                            with language options, ensuring accessibility and ease of use for a global
+                                            audience.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-1 w-auto">
+                                        <div class="benefit_icon-bg"><img src="img/icon-6.svg" alt=""></div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="benefit_title">Exchange</div>
+                                        <div class="benefit_text">This feature in a cryptocurrency wallet allows users
+                                            to conveniently trade one cryptocurrency for another directly within the
+                                            wallet interface.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center pt-6">
+                    <a href="" class="btn btn-neon btn-app"><span class="text-neon">DOWNLOAD</span></a>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="container py-6">
-      <div class="row benefit_wrapper">
-        <div class="col pe-0">
-          <div class="row row-cols-1 align-items-start benefit_block">
-            <div class="col">
-              <div class="row">
-                <div class="col-1 w-auto">
-                  <div class="benefit_icon-bg"><img src="img/icon-1.svg" alt=""></div>
+    <footer class="mt-auto">
+        <div class="container">
+            <div class="row justify-content-center wrapper_footer">
+                <div class="col-12 col-lg-3 w-auto footer-block">
+                    <h3 class="footer-title">Jaxx</h3>
+                    <div class="footer_item-list">
+                        <a href="">Rules</a> <br>
+                        <a href="">Policy</a> <br>
+                        <a href="">Tournaments</a> <br>
+                        <a href="">Giveaways</a> <br>
+                        <a href="">News</a> <br>
+                    </div>
                 </div>
-                <div class="col">
-                  <div class="benefit_title">Manage dozens of cryptocurrencies</div>
-                  <div class="benefit_text">Send and receive various cryptocurrencies with ease, check balances,
-                    review transaction history, and access detailed coin information.
-                  </div>
+                <div class="col-12 col-lg-3 w-auto footer-block">
+                    <h3 class="footer-title">Company</h3>
+                    <div class="footer_item-list">
+                        <a href="">About Us</a> <br>
+                        <a href="">Questions</a> <br>
+                        <a href="">Blog</a> <br>
+                    </div>
                 </div>
-              </div>
+                <div class="col-12 col-lg-3 w-auto footer-block">
+                    <h3 class="footer-title">Contacts</h3>
+                    <div class="footer_item-list">
+                        <a href="">Facebook</a> <br>
+                        <a href="">Twitter/Twitter Support</a> <br>
+                        <a href="">Instagram</a> <br>
+                        <a href="">Giveaways</a> <br>
+                        <a href="">News</a> <br>
+                    </div>
+                </div>
             </div>
-            <div class="col">
-              <div class="row">
-                <div class="col-1 w-auto">
-                  <div class="benefit_icon-bg"><img src="img/icon-1.svg" alt=""></div>
-                </div>
-                <div class="col">
-                  <div class="benefit_title">Manage dozens of cryptocurrencies</div>
-                  <div class="benefit_text">Send and receive various cryptocurrencies with ease, check balances,
-                    review transaction history, and access detailed coin information.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="row">
-                <div class="col-1 w-auto">
-                  <div class="benefit_icon-bg"><img src="img/icon-1.svg" alt=""></div>
-                </div>
-                <div class="col">
-                  <div class="benefit_title">Manage dozens of cryptocurrencies</div>
-                  <div class="benefit_text">Send and receive various cryptocurrencies with ease, check balances,
-                    review transaction history, and access detailed coin information.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+            <div class="text-center mt-5">© Jaxx Evolution 2023</div>
         </div>
-        <div class="col p-0">
-          <img style="width: 100%" src="img/ipad.png" alt="ipad">
-        </div>
-        <div class="col ps-0" style="margin-left: -30px;">
-          <div class="row row-cols-1 align-items-start benefit_block">
-            <div class="col">
-              <div class="row">
-                <div class="col-1 w-auto">
-                  <div class="benefit_icon-bg"><img src="img/icon-1.svg" alt=""></div>
-                </div>
-                <div class="col">
-                  <div class="benefit_title">Manage dozens of cryptocurrencies</div>
-                  <div class="benefit_text">Send and receive various cryptocurrencies with ease, check balances,
-                    review transaction history, and access detailed coin information.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="row" style="padding-left: 30px">
-                <div class="col-1 w-auto">
-                  <div class="benefit_icon-bg"><img src="img/icon-1.svg" alt=""></div>
-                </div>
-                <div class="col">
-                  <div class="benefit_title">Manage dozens of cryptocurrencies</div>
-                  <div class="benefit_text">Send and receive various cryptocurrencies with ease, check balances,
-                    review transaction history, and access detailed coin information.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="row">
-                <div class="col-1 w-auto">
-                  <div class="benefit_icon-bg"><img src="img/icon-1.svg" alt=""></div>
-                </div>
-                <div class="col">
-                  <div class="benefit_title">Manage dozens of cryptocurrencies</div>
-                  <div class="benefit_text">Send and receive various cryptocurrencies with ease, check balances,
-                    review transaction history, and access detailed coin information.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="text-center pt-6">
-        <a href="" class="btn btn-neon btn-app"><span class="text-neon">DOWNLOAD</span></a>
-      </div>
-    </div>
-  </div>
+    </footer>
 </div>
-<footer class="mt-auto">
-  <div class="container">
-    <div class="row justify-content-center wrapper_footer">
-      <div class="col-3 w-auto">
-        <h3 class="footer-title">Jaxx</h3>
-        <div>
-          <a href="">Rules</a> <br>
-          <a href="">Policy</a> <br>
-          <a href="">Tournaments</a> <br>
-          <a href="">Giveaways</a> <br>
-          <a href="">News</a> <br>
-        </div>
-      </div>
-      <div class="col-3 w-auto">
-        <h3 class="footer-title">Company</h3>
-        <div>
-          <a href="">About Us</a> <br>
-          <a href="">Questions</a> <br>
-          <a href="">Blog</a> <br>
-        </div>
-      </div>
-      <div class="col-3 w-auto">
-        <h3 class="footer-title">Contacts</h3>
-        <div>
-          <a href="">Facebook</a> <br>
-          <a href="">Twitter / Twitter Support</a> <br>
-          <a href="">Instagram</a> <br>
-          <a href="">Giveaways</a> <br>
-          <a href="">News</a> <br>
-        </div>
-      </div>
-    </div>
-    <div class="text-center mt-5">© Jaxx Evolution 2023</div>
-  </div>
-</footer>
+<script src="https://unpkg.com/vue@next"></script>
+<script>
+    const app = Vue.createApp({
+        data() {
+            return {
+                showMenu: false
+            };
+        },
+        methods: {
+            toggleMenu() {
+                this.showMenu = !this.showMenu;
+            }
+        },
+    });
+
+    app.mount('#app');
+</script>
 </body>
 </html>

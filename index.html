@@ -13,12 +13,12 @@
 </head>
 <body>
 <div id="app">
-    <header class="header">
+    <header id="header" class="header">
         <div class="container container-h">
             <a href="./index.html">
                 <img alt="logo" class="logo" src="img/logo.svg" width="125" height="125"/>
             </a>
-            <nav>
+            <nav class="d-none d-lg-block">
                 <ul class="nav">
                     <li><a href="./app.html">Web app</a></li>
                     <li><a href="./download.html">Download</a></li>
@@ -26,13 +26,34 @@
                     <li><a href="./about.html">About Us</a></li>
                 </ul>
             </nav>
+            <nav class="d-block d-lg-none">
+                <div id="burger-menu" @click="toggleMenu">
+                    <div id="burger">
+                        <svg width="50px" class="mob-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" focusable="false"
+                             aria-hidden="true">
+                            <rect x="15" y="16" width="18" height="2"></rect>
+                            <rect x="15" y="23" width="18" height="2"></rect>
+                            <rect x="15" y="30" width="18" height="2"></rect>
+                        </svg>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="nav-block" :class="{show: showMenu}" v-if="showMenu" style="display:none;">
+            <ul>
+                <li><a href="./app.html">Web app</a></li>
+                <li><a href="./download.html">Download</a></li>
+                <li><a href="./support.html">Support</a></li>
+                <li><a href="./about.html">About Us</a></li>
+            </ul>
         </div>
     </header>
     <div>
         <div class="container position-relative">
+
             <div class="bg-coins"></div>
             <div class="row py-6">
-                <div class="col">
+                <div class="col-12 col-lg hero-main">
                     <h1 class="text-title"><span class="text-main fw-bold">Jaxx Evolution</span> <br>Crypto Wallet</h1>
                     <div class="text-text opacity-75">
                         Accessible on any device. Now you can become a Jaxx Evolution user in just a couple of minutes.
@@ -42,10 +63,10 @@
                         and tracking the value of your investment portfolio are additional features for you from Jaxx
                         Evolution.
                     </div>
-                    <div class="btn btn-soon fw-medium">Create wallet</div>
+                    <div class="btn btn-soon px-3 h-auto fw-medium">Create wallet</div>
                 </div>
-                <div class="col">
-                    <img src="img/img_pc.png" alt="">
+                <div class="col text-center">
+                    <img class="img-fluid" src="img/img_pc.png" alt="">
                 </div>
             </div>
         </div>
@@ -88,33 +109,33 @@
             </div>
         </div>
         <div class="container">
-            <div class="row align-items-center py-6">
-                <div class="col">
+            <div class="row align-items-center py-6 soon_wrapper">
+                <div class="col-12 col-lg text-center text-lg-start">
                     <h2 class="text-main fw-bold soon_title">Coming Soon</h2>
                     <div class="soon_text">
                         Jaxx Evolution will be available as a desktop application for multiple platforms, including
                         iOS, Android, Windows and Linux.
                     </div>
                     <div class="row row-cols-2 row-soon m-0">
-                        <div class="col-4">
+                        <div class="col-5 col-lg-4">
                             <div class="btn d-flex align-items-center justify-content-center btn-soon row">
                                 <img class="col-5 w-auto" src="img/apple.png" alt="apple">
                                 <span class="col-5 w-auto p-0 text-white">Soon</span>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-5 col-lg-4">
                             <div class="btn d-flex align-items-center justify-content-center btn-soon row">
                                 <img class="col-5 w-auto" src="img/android.png" alt="apple">
                                 <span class="col-5 w-auto p-0 text-white">Soon</span>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-5 col-lg-4">
                             <div class="btn d-flex align-items-center justify-content-center btn-soon row">
                                 <img class="col-5 w-auto" src="img/linux.png" alt="apple">
                                 <span class="col-5 w-auto p-0 text-white">Soon</span>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-5 col-lg-4">
                             <div class="btn d-flex align-items-center justify-content-center btn-soon row">
                                 <img class="col-5 w-auto" src="img/win.png" alt="apple">
                                 <span class="col-5 w-auto p-0 text-white">Soon</span>
@@ -123,16 +144,16 @@
                     </div>
                 </div>
                 <div class="col">
-                    <img src="img/comingSoon.png" alt="">
+                    <img class="img-fluid" src="img/comingSoon.png" alt="">
                 </div>
             </div>
         </div>
         <div class="container-fluid wrapper_fund">
             <div class="container">
                 <h2 class="h-title fw-bolder">How to fund?</h2>
-                <div class="opacity-75">It's easy to top up any cryptocurrency account in Jaxx.</div>
+                <div class="opacity-75 text-lg-start text-center">It's easy to top up any cryptocurrency account in Jaxx.</div>
                 <div class="row fund_blocks-list">
-                    <div class="col fund_block">
+                    <div class="col-12 col-lg fund_block">
                         <h4>Receive</h4>
                         <div class="fund_text">Go to the page of the desired cryptocurrency from the 'Wallet' section
                             and click on the
@@ -140,14 +161,14 @@
                         </div>
                         <img src="img/path1.svg" alt="">
                     </div>
-                    <div class="col fund_block">
-                        <img class="mb-5" src="img/path2.svg" alt="">
+                    <div class="col-12 col-lg fund_block text-lg-start text-end">
+                        <img class="mb-lg-5 mb-4" src="img/path2.svg" alt="">
                         <h4>Copy</h4>
                         <div class="fund_text">Copy the wallet address of the digital coin you want to deposit or use
                             the QR code.
                         </div>
                     </div>
-                    <div class="col fund_block">
+                    <div class="col-12 col-lg fund_block">
                         <h4>Paste</h4>
                         <div class="fund_text">When processing a transaction in the Jaxx wallet, paste the copied
                             address of the
@@ -155,8 +176,8 @@
                         </div>
                         <img src="img/path3.svg" alt="">
                     </div>
-                    <div class="col fund_block">
-                        <img class="mb-5" src="img/path4.svg" alt="">
+                    <div class="col-12 col-lg fund_block text-lg-start text-end">
+                        <img class="mb-lg-5 mb-4" src="img/path4.svg" alt="">
                         <h4>Confirm</h4>
                         <div class="fund_text">Confirm the transfer, and you're done!
                         </div>
@@ -166,7 +187,7 @@
             <div class="container wrapper_stats">
                 <h2 class="text-center mb-5">Jaxx in Numbers</h2>
                 <div class="row stats_blocks-list">
-                    <div class="col stat-block">
+                    <div class="col-12 col-lg stat-block">
                         <div class="stat_main">
                             <img class="line-border" src="img/line.svg" alt="">
                             <img src="img/icon-stat1.svg" alt="">
@@ -175,7 +196,7 @@
                         </div>
                         <div class="stat_text">are already using the Jaxx cryptocurrency wallet.</div>
                     </div>
-                    <div class="col stat-block">
+                    <div class="col-12 col-lg stat-block">
                         <div class="stat_main">
                             <img class="line-border" src="img/line2.svg" alt="">
                             <img src="img/icon-stat2.svg" alt="">
@@ -186,7 +207,7 @@
                             since the launch.
                         </div>
                     </div>
-                    <div class="col stat-block">
+                    <div class="col-12 col-lg stat-block">
                         <div class="stat_main">
                             <img class="line-border" src="img/line3.svg" alt="">
                             <img src="img/icon_stat3.svg" alt="">
@@ -197,7 +218,7 @@
                             through referrals from their friends.
                         </div>
                     </div>
-                    <div class="col stat-block">
+                    <div class="col-12 col-lg stat-block">
                         <div class="stat_main">
                             <img class="line-border" src="img/line4.svg" alt="">
                             <img src="img/icon_stat4.svg" alt="">
@@ -212,7 +233,7 @@
         <div class="container py-6">
             <div class="wrapper_banner">
                 <div class="row align-items-center">
-                    <div class="col text-white">
+                    <div class="col text-white text-center text-lg-start">
                         <h2>Create a crypto <br>
                             wallet right now!</h2>
                         <div class="banner-text text-opacity">Join Jaxx Evolution and become the <br>
@@ -224,7 +245,7 @@
                         </a>
                     </div>
                     <div class="col">
-                        <img src="img/image-banner.png" alt="">
+                        <img class="img-fluid" src="img/image-banner.png" alt="">
                     </div>
                 </div>
             </div>
@@ -238,7 +259,7 @@
                 love for this application and are committed to restoring its functionality. Our goal is to not only
                 revive Jaxx
                 Liberty, but to also continue to develop and improve upon its features.
-                <div class="text-rip text-main pt-5 text-end">ex. Liberty</div>
+                <div class="text-rip text-main pt-3 pt-lg-5 text-end">ex. Liberty</div>
             </div>
         </div>
         <div class="container wrapper_faq">
@@ -248,8 +269,9 @@
             <div class="faq_block-list">
                 <div v-for="(faq, index) in faqs" :key="index" class="faq_block-item">
                     <div class="row">
-                        <div class="col faq-name">{{ faq.question }}</div>
-                        <div @click="toggleAnswer(index)" class="col-1 w-auto btn-faq">
+                        <div class="col faq-name">{{ faq.question }}
+                        </div>
+                        <div @click="toggleAnswer(index)" class="col-2 col-lg-1 w-auto btn-faq">
                             <img v-if="faq.showAnswer" src="img/minus.svg" alt="">
                             <img v-else src="img/plus.svg" alt="">
                         </div>
@@ -262,9 +284,9 @@
     <footer class="mt-auto">
         <div class="container">
             <div class="row justify-content-center wrapper_footer">
-                <div class="col-3 w-auto">
+                <div class="col-12 col-lg-3 w-auto footer-block">
                     <h3 class="footer-title">Jaxx</h3>
-                    <div>
+                    <div class="footer_item-list">
                         <a href="">Rules</a> <br>
                         <a href="">Policy</a> <br>
                         <a href="">Tournaments</a> <br>
@@ -272,19 +294,19 @@
                         <a href="">News</a> <br>
                     </div>
                 </div>
-                <div class="col-3 w-auto">
+                <div class="col-12 col-lg-3 w-auto footer-block">
                     <h3 class="footer-title">Company</h3>
-                    <div>
+                    <div class="footer_item-list">
                         <a href="">About Us</a> <br>
                         <a href="">Questions</a> <br>
                         <a href="">Blog</a> <br>
                     </div>
                 </div>
-                <div class="col-3 w-auto">
+                <div class="col-12 col-lg-3 w-auto footer-block">
                     <h3 class="footer-title">Contacts</h3>
-                    <div>
+                    <div class="footer_item-list">
                         <a href="">Facebook</a> <br>
-                        <a href="">Twitter / Twitter Support</a> <br>
+                        <a href="">Twitter/Twitter Support</a> <br>
                         <a href="">Instagram</a> <br>
                         <a href="">Giveaways</a> <br>
                         <a href="">News</a> <br>
@@ -328,12 +350,16 @@
                         showAnswer: false,
                     },
                 ],
+                showMenu: false
             };
         },
         methods: {
             toggleAnswer(index) {
                 this.faqs[index].showAnswer = !this.faqs[index].showAnswer;
             },
+            toggleMenu() {
+                this.showMenu = !this.showMenu;
+            }
         },
     });
 
