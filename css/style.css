@@ -537,7 +537,7 @@ footer {
     display: inline-block;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     h1 {
         font-size: 46px;
     }
